@@ -1,11 +1,11 @@
+<?php include('config.php'); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <title>Projeto_01</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
-    <link href="fontawesome/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="palavras-chave,do,meu,site">
     <meta name="descripition" content="Descrição do meu website">
@@ -15,13 +15,13 @@
 
     <header>
         <div class="center">
-            <div class="logo left">Logomarca</div><!--logo-->
+            <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->
             <nav class="desktop right">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
             <nav class="mobile right">
@@ -29,10 +29,10 @@
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
             <div class="clear"></div><!--clear-->
@@ -71,7 +71,7 @@
 
             <div class="w50 left">
                 <!--Pegar imagen depois-->
-                <img class="right" src="./image/profile.jpg" />
+                <img class="right" src="<?php echo INCLUDE_PATH; ?>./image/profile.jpg" />
             </div><!--w50-->
             <div class="clear"></div>
         </div><!--center-->
@@ -166,7 +166,9 @@
 
     <!--Jquery usando CDN-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
     
 </body>
 </html>
+
+//efeitos menu com jquery e manipulação de classes com URL amigável
